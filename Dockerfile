@@ -5,7 +5,7 @@ RUN chown 1001 /usr/src/app \
     && chmod "g+rwX" /usr/src/app \
     && chown 1001:root /usr/src/app
 
-COPY package*.json ./
+COPY --chown=1001:root package*.json ./
 
 RUN npm install
 
